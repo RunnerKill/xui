@@ -1,0 +1,35 @@
+<div class="ui-page">
+    <div class="ui-title fixed-top">
+        <h2>Web编辑器 - UEditor</h2>
+        <span>在script区域调用$(selector).UEditor()，具体参数可查阅../media/plugin/ueditor/ueditor.ext.js</span>
+    </div>
+    <div class="ui-content">
+        <div class="ui-pannel">
+            <div class="ui-data-form">
+	            <div class="ui-divider">UEDITOR</div>
+	            <dl>
+	                <dt>添加内容：</dt>
+	                <dd>
+	            	    <textarea id="ue_demo_add_content" name="t1"></textarea>
+	                </dd>
+	            </dl>
+	            <dl>
+	            	<dt>编辑内容：</dt>
+	            	<dd>
+	                    <textarea id="ue_demo_edit_content" name="t2">这里<span style="color:#006600;">是</span><span style="background-color:#FF9900;"><span style="color:#006600;">测试</span>文字</span></textarea>
+	                    <span class="tips">配置参数options</span>
+	            	</dd>
+	            </dl>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+$('textarea#ue_demo_add_content').UEditor({
+    height : 300
+});
+$('textarea#ue_demo_edit_content').UEditor({
+    width : 800,
+    toolbars : ['source', 'undo', 'redo', 'bold', 'italic', 'underline', 'strikethrough', 'fontborder', 'forecolor', 'backcolor', 'link', 'unlink', 'justifyleft', 'justifyright', 'justifycenter', 'justifyjustify', 'touppercase', 'tolowercase', 'indent', 'rowspacingtop', 'rowspacingbottom', 'lineheight']
+});
+</script>
+</div>

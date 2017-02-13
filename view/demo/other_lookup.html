@@ -1,0 +1,68 @@
+<div class="ui-page">
+    <div class="ui-title fixed-top">
+        <h2>查找带回</h2>
+        <span>实质上就是class="ui-lookup"的弹出层链接(target="dialog")</span>
+    </div>
+    <div class="ui-content">
+        <div class="ui-pannel">
+            <div class="ui-divider">单条带回</div>
+            <p>
+                <span>部门名称：</span>
+                <input type="hidden" name="t1" id="dept.id" />
+                <input type="text" name="t2" id="dept.name" />
+                <a href="demo/server_msg/lookup_single.html"
+                    target="lookup" rel="dept" title="单条选择"></a>
+            </p>
+            <p>
+                <span>部门编号：</span>
+                <input type="text" name="t3" id="dept.code" />
+                <span class="tips">以id="group.key"的形式组织带回元素</span>
+            </p>
+        </div>
+        <div class="ui-pannel">
+            <div class="ui-divider">批量带回</div>
+            <p>
+                <span>部门名称：</span>
+                <input type="hidden" name="t4" id="dept1.id" />
+                <input type="text" name="t5" id="dept1.name" />
+                <a href="demo/server_msg/lookup_multiple.html"
+                    target="lookup" rel="dept1" title="批量选择"></a>
+            </p>
+            <p>
+                <span>部门编号：</span>
+                <input type="text" name="t6" id="dept1.code" />
+                <span class="tips">批量与单条查找部分html代码无异，区别在于bringBack时</span>
+            </p>
+        </div>
+        <div class="ui-pannel">
+            <div class="ui-divider">附件带回</div>
+            <p>
+                <span>文件名：</span>
+                <input type="hidden" name="fileId" id="file.id" />
+                <input type="text" name="fileName" id="file.name" />
+                <a href="demo/server_msg/lookup_attachment.html"
+                    target="attachment" rel="file" title="选择附件上传"></a>
+            </p>
+            <p>
+                <span>文件大小：</span>
+                <input type="text" name="fileSize" id="file.size" />
+            </p>
+            <p>
+                <span>文件类型：</span>
+                <input type="text" name="fileType" id="file.type" />
+                <span class="tips"></span>
+            </p>
+        </div>
+        <div class="ui-pannel">
+            <div class="ui-divider">Dialog.bringBack(group, params)方法参数说明</div>
+            <p>
+                <span>group参数：</span>
+                <span class="tips">对应需要带回设置的值对应id的组。<br />如：id="dept.id"，则group即为"dept"</span>
+            </p>
+            <p>
+                <span>params参数：</span>
+                <span class="tips">若为对象，则为单条带回；若为数组，则为批量带回。<br />如：{id:"1",name:"部门1",code:"A001"}，或者[{id:"1",name:"部门1",code:"A001"},{id:"2",name:"部门2",code:"A002"}]</span>
+            </p>
+        </div>
+    </div>
+</div>

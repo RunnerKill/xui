@@ -1,0 +1,36 @@
+<div class="ui-page">
+    <div class="ui-title fixed-top">
+        <h2>下拉选框</h2>
+        <span>需要以下样式，请在select标签加上class="ui-select"</span>
+    </div>
+    <div class="ui-content">
+        <div class="ui-pannel">
+            <div class="ui-divider">基础样式</div>
+            <span>政治面貌：</span>
+            <select class="ui-select" name="polity" onchange="XUI.alert(this.value)">
+                <option value="0" selected="selected"> - 请选择 - </option>
+                <option value="1">共青团员</option>
+                <option value="2">共产党员</option>
+                <option value="3">群众</option>
+                <option value="4">其他</option>
+            </select>
+        </div>
+        <div class="ui-pannel">
+            <div class="ui-divider">多级联动</div>
+            <span>行政区域：</span>
+            <select class="ui-select" name="province">
+                <option value="all" selected="selected"> - 省/直辖市 - </option>
+                <option value="bj">北京</option>
+                <option value="sh">上海</option>
+                <option value="zj">浙江省</option>
+            </select>
+            <select class="ui-select" name="city" data-rel="province" data-url="demo/server_msg/select_city.json?province">
+                <option value="all" selected="selected"> - 市 - </option>
+            </select>
+            <select class="ui-select" name="town" data-rel="city" data-url="demo/server_msg/select_town.json?city">
+                <option value="all" selected="selected"> - 区/镇 - </option>
+            </select>
+            <span class="tips">在select标签上添加"data-rel"属性和"data-url"属性</span>
+        </div>
+    </div>
+</div>

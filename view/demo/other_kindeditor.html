@@ -1,0 +1,42 @@
+<div class="ui-page">
+    <div class="ui-title fixed-top">
+        <h2>Web编辑器 - KindEditor</h2>
+        <span>在script区域调用KindEditor.create()，具体参数详见官网 <a href="http://kindeditor.net/doc.php" target="_blank"><b>文档API</b></a></span>
+    </div>
+    <div class="ui-content">
+        <div class="ui-pannel">
+            <div class="ui-data-form">
+	            <div class="ui-divider">input按钮</div>
+	            <dl>
+	                <dt>添加内容：</dt>
+	                <dd>
+		                <textarea id="ke_demo_add_content" name="t1" style="width:670px;height:150px;"></textarea>
+	                </dd>
+	            </dl>
+	            <dl>
+	                <dt>编辑内容：</dt>
+	                <dd>
+		                <textarea id="ke_demo_edit_content" name="t2" style="width:420px;height:150px;">这里<span style="color:#006600;">是</span><span style="background-color:#FF9900;"><span style="color:#006600;">测试</span>文字</span></textarea>
+		                <span class="tips">配置参数中的items属性</span>
+	                </dd>
+	            </dl>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+KindEditor.create('textarea#ke_demo_add_content', {
+    uploadJson : 'ke/upload',
+	allowFileManager : false,
+	filterMode : false,
+	wellFormatMode : false
+});
+KindEditor.create('textarea#ke_demo_edit_content', {
+	minWidth : 420,
+	items : [
+         'source', '|', 'preview', 'print', '|', 'forecolor', 'hilitecolor', 'bold',
+         'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat', '|',
+         'emoticons', 'link', 'unlink', '|', 'about'
+    ]
+});
+</script>
+</div>

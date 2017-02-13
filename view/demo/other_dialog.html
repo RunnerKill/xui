@@ -1,0 +1,130 @@
+<div class="ui-page">
+    <div class="ui-title fixed-top">
+        <h2>弹出层</h2>
+        <span></span>
+    </div>
+    <div class="ui-content">
+        <div class="ui-pannel">
+            <div class="ui-divider">信息框</div>
+            <p>
+                <span>信息：</span>
+                <input type="button" value="信息" onclick="XUI.alert('文字内容');" />
+                <span class="tips">onclick="XUI.alert('文字内容');"</span>
+            </p>
+            <p>
+                <span>成功：</span>
+                <input type="button" value="成功" onclick="XUI.succeed('文字内容');" />
+                <span class="tips">onclick="XUI.succeed('文字内容');"</span>
+            </p>
+            <p>
+                <span>失败：</span>
+                <input type="button" value="失败" onclick="XUI.fail('文字内容');" />
+                <span class="tips">onclick="XUI.fail('文字内容');"</span>
+            </p>
+            <p>
+                <span>警告：</span>
+                <input type="button" value="警告" onclick="XUI.warn('文字内容');" />
+                <span class="tips">onclick="XUI.warn('文字内容');"</span>
+            </p>
+        </div>
+        <div class="ui-pannel">
+            <div class="ui-divider">确认框</div>
+            <p>
+                <span>确认：</span>
+                <input type="button" value="确认" onclick="XUI.confirm('确定继续?', function(){alert('ok');});" />
+                <span class="tips">onclick="XUI.confirm('确定继续?', callback));"</span>
+            </p>
+        </div>
+        <div class="ui-pannel">
+            <div class="ui-divider">通知框</div>
+            <p>
+                <span>通知：</span>
+                <input type="button" value="通知" onclick="XUI.notic('通知消息', '通知通知，紧急通知！即将有打大暴风雪来临，请各员工下班临走前关好门窗，谢谢配合！', 2000);" />
+                <span class="tips">onclick="XUI.notic(title, content, time);"</span>
+            </p>
+            <p>
+                <span>参数说明：</span>
+                <span class="tips">
+                    title : '', // 标题文字<br />
+                    content : '', // 内容（可以是html片段）<br />
+                    time : 0 // 单位毫秒后自动关闭，默认为0，不会自动关闭。
+                </span>
+            </p>
+        </div>
+        <div class="ui-pannel">
+            <div class="ui-divider">加载层</div>
+            <p>
+                <span>加载：</span>
+                <input type="button" value="加载" onclick="XUI.load('', 1000);" />
+            </p>
+            <p>
+                <span>有文字：</span>
+                <input type="button" value="有文字" onclick="XUI.load('正在加载...', 1000);" />
+                <span class="tips">onclick="XUI.load(msg, time);"</span>
+            </p>
+            <p>
+                <span>参数说明：</span>
+                <span class="tips">
+                    msg : '', // 显示文字<br />
+                    time : 0 // 单位毫秒后自动关闭，默认为0，不会自动关闭。一般需要调用XUI.close(index)来关闭，其中index为XUI.load的返回值
+                </span>
+            </p>
+        </div>
+        <div class="ui-pannel">
+            <div class="ui-divider">弹出页</div>
+            <p>
+                <span>基本窗口：</span>
+                <input type="button" value="基本窗口" onclick="Dialog.open({url : 'demo/other_dialog.html'});" />
+                <span class="tips">onclick="Dialog.open(options);"<br />
+                </span>
+            </p>
+            <p>
+                <span>外部链接：</span>
+                <input type="button" value="外部链接" onclick="Dialog.openOuter({title : '百度', url : 'http://www.baidu.com'});" />
+                <span class="tips">onclick="Dialog.openOuter(options);"<br />
+                </span>
+            </p>
+            <p>
+                <span>options参数：</span>
+                <span class="tips">
+                    key : 'default_key', // 若key相同则刷新，不同则继续弹出（必须，openPage方法无）<br />
+                    title : '窗口', // 标题<br />
+                    maxmin : true, // 是否有最大/小化按钮<br />
+                    model : true, // 是否为模态<br />
+                    width : 830, // 弹出层宽<br />
+                    height : 560, // 弹出层高<br />
+                    url : null, // 请求地址（必须）<br />
+                    data : {}, // 请求数据（openPage方法无）<br />
+                    callback : function() {} // 打开页面后回调<br />
+                </span>
+            </p>
+        </div>
+        <div class="ui-pannel">
+            <div class="ui-divider">弹出层链接</div>
+            <p>
+                <span>默认：</span>
+                <a href="demo/other_dialog.html" target="dialog">点击弹出</a>
+                <a href="http://www.baidu.com" target="dialog">外部链接</a>
+                <span class="tips">target="dialog"</span>
+            </p>
+            <p>
+                <span>其他属性：</span>
+                <a href="demo/other_dialog.html" target="dialog" rel="new_dialog" title="新弹出层" width="460" height="330" model="false">点击弹出1</a>
+                <a href="demo/other_dialog.html" target="dialog" rel="new_dialog2" title="新弹出层2" width="460" height="330" model="false">点击弹出2</a>
+                <a href="demo/other_dialog.html" target="dialog" rel="new_dialog3" title="新弹出层3" width="460" height="330" model="false">点击弹出3</a>
+                <span class="tips">target="dialog" rel="new_dialog" title="新弹出层" width="460" height="330" model="false"</span>
+            </p>
+            <p>
+                <span>属性说明：</span>
+                <span class="tips">
+                    rel属性：对应options.key<br />
+                    model属性：对应options.model<br />
+                    width属性：对应options.width<br />
+                    height属性：对应options.height<br />
+                    title属性：对应options.title<br />
+                    href属性：对应options.url
+                </span>
+            </p>
+        </div>
+    </div>
+</div>

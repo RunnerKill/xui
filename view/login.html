@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>XUI管理平台</title>
+<script type="text/javascript" src="../media/js/jquery-1.9.0.js"></script>
+<link rel="stylesheet" href="../media/css/template.css" />
+<link rel="stylesheet" href="../media/css/xui.login.css" /> 
+</head>
+
+<body>
+	<!-- 背景图片 -->
+	<div class="ui-login-bg">
+		<img src="../media/images/login/bg.jpg" />
+	</div>
+
+	<!-- 标题 -->
+	<div class="ui-login-title">
+		<img src="../media/images/login/logo.png" />
+		<h2>XUI管理平台</h2>
+	</div>
+
+	<!-- 登录区域 -->
+	<div class="ui-login-form">
+		<div class="line">
+			<span class="title">登录</span> 
+			<span class="tips">还没有账号？
+				<a href="active">立即注册</a>
+			</span>
+		</div>
+		<form action="index.html" method="post">
+			<div class="line">
+				<input type="text" class="act" name="account" placeholder="请输入注册手机/邮箱" />
+			</div>
+			<div class="line">
+				<input type="password" class="pwd" name="password" placeholder="请输入密码" />
+			</div>
+			<div class="line">
+				<input type="text" class="code" name="code" placeholder="请输入验证码" />
+				<img class="code-img" src="http://usr.im/100x50" />
+				<a href="javascript:;">看不清?换一张</a>  
+			</div>
+			<div class="line" style="text-align: center;">
+				<input type="submit" class="login" value="登 录" /> 
+				<a class="fgt-pwd" href="javascript:;">忘记密码？</a>
+			</div>
+		</form>
+		<div class="line err">错误提示信息</div>
+	</div>
+
+	<!-- 底部 -->
+	<div class="ui-bottom">
+		<p>
+			<a href="javascript:;">关于我们(About Us)</a> 
+			<a href="javascript:;">联系我们</a>
+			<a href="javascript:;">服务条款</a>
+		</p>
+	</div>
+</body>
+</html>

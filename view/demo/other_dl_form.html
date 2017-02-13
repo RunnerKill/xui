@@ -1,0 +1,102 @@
+<div class="ui-page">
+<form class="ui-form validate" action="demo/server_msg/success.json" method="post" onsubmit="return callbackForm(this)">
+    <div class="ui-title fixed-top">
+        <h2>dl表单</h2>
+        <span>采用dl/dt/dd标签进行布局</span>
+    </div>
+    <div class="ui-content">
+        <div class="ui-pannel">
+            <div class="ui-data-form">
+                <div class="ui-divider">dl表单</div>
+                <p class="tips">填写微信账号信息，格式参照夏意e家。</p>
+                <dl>
+                    <dt>账号</dt>
+                    <dd><input class="required" type="text" name="account" placeholder="请输入账号" /></dd>
+                </dl>
+                <dl>
+                    <dt>密码</dt>
+                    <dd>
+                        <input class="required" rangelength="6,12" type="password" name="password" />
+                        <span class="tips">密码只能是数字、字母和下划线。</span>
+                    </dd>
+                </dl>
+                <p class="tips">填写您的个人基本信息。</p>
+                <dl>
+                    <dt>手机</dt>
+                    <dd><input class="required mobile" type="text" name="mobile" /></dd>
+                </dl>
+                <dl>
+                    <dt>姓名</dt>
+                    <dd><input class="optional" type="text" name="name" /></dd>
+                </dl>
+                <p class="tips">如果需要大长度的文本框，加上class="large-width"</p>
+                <dl>
+                    <dt>E-mail</dt>
+                    <dd>
+                        <input class="optional email large-width" type="text" name="email" />
+                        <span class="tips">选填E-mail</span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>政治面貌</dt>
+                    <dd>
+                        <select class="ui-select" name="polity">
+                            <option value="0" selected="selected"> - 请选择 - </option>
+                            <option value="1">共青团员</option>
+                            <option value="2">共产党员</option>
+                            <option value="3">群众</option>
+                            <option value="4">其他</option>
+                        </select>
+                    </dd>
+                </dl>
+                <dl>
+                	<dt>出生日期</dt>
+                	<dd>
+                        <input type="text" name="birthday" class="Wdate" onfocus="WdatePicker()" />
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>性别</dt>
+                    <dd>
+                        <!-- 注意，单选框一定要有默认checked="checked"的radio -->
+                        <input class="ui-check" type="radio" name="gender" id="gender_female" value="0" checked="checked" />
+                        <label for="gender_female">女</label>
+                        <input class="ui-check" type="radio" name="gender" id="gender_male" value="1" />
+                        <label for="gender_male">男</label>
+                        <span class="tips">注意，单选框一定要有默认checked="checked"的radio</span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>兴趣</dt>
+                    <dd>
+                        <input class="ui-check" type="checkbox" name="interest" id="interest_swim" value="1" />
+                        <label for="interest_swim">游泳</label>
+                        <input class="ui-check" type="checkbox" name="interest" id="interest_soccer" value="2" />
+                        <label for="interest_soccer">踢足球</label>
+                        <input class="ui-check" type="checkbox" name="interest" id="interest_sing" value="3" />
+                        <label for="interest_sing">唱歌</label>
+                        <input class="ui-check" type="checkbox" name="interest" id="interest_read" value="4" />
+                        <label for="interest_read">读书</label>
+                        <input class="ui-check" type="checkbox" name="interest" id="interest_film" value="5" />
+                        <label for="interest_film">看看电影</label>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>备注</dt>
+                    <dd><textarea name="comment"></textarea></dd>
+                </dl>
+            </div>
+            <!-- 内嵌样式
+            <div class="ui-button">
+                <input type="submit" value="提交" />
+                <input type="reset" value="重置" />
+            </div>
+             -->
+        </div>
+    </div>
+    <div class="ui-button fixed-bottom">
+        <input type="submit" value="提交" />
+        <input type="reset" value="重置" />
+    </div>
+</form>
+</div>

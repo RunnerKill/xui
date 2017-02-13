@@ -1,0 +1,20 @@
+<div class="ui-page">
+<form class="ui-form validate" action="demo/server_msg/lookup_attachment_bringBack.html"
+     enctype="multipart/form-data" method="post" onsubmit="return callbackFile(this, null, Dialog.bringBack, 'file')">
+    <div class="ui-content">
+        <div class="ui-pannel">
+            <div class="ui-data-form">
+                <div class="ui-divider">附件上传</div>
+                <dl>
+                    <dt>请选择</dt>
+                    <dd><input class="required" type="file" name="file" placeholder="从电脑选择文件" /></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="ui-button fixed-bottom">
+        <input type="submit" value="提交" />
+        <input type="reset" value="重置" />
+    </div>
+</form>
+</div>

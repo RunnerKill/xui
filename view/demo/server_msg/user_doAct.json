@@ -1,0 +1,7 @@
+{
+    "code" : 200,
+    "message" : "操作成功！",
+    "type" : "close",
+    "pageType" : "navtab",
+    "pageKey" : "user_list"
+}

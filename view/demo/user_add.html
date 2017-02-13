@@ -1,0 +1,118 @@
+<div class="ui-page">
+<form class="ui-form validate" action="demo/server_msg/user_doAct.json" method="post" onsubmit="return callbackForm(this)">
+    <div class="ui-title fixed-top">
+        <h2>添加</h2>
+        <span>用户</span>
+    </div>
+    <div class="ui-content">
+        <div class="ui-pannel">
+            <div class="ui-data-form">
+                <div class="ui-divider">添加</div>
+                <p class="tips">普通字符串类型字段</p>
+                <dl>
+                    <dt>账号</dt>
+                    <dd>
+                        <input class="required" type="text" name="account" placeholder="请输入账号" />
+                        <span class="tips">带提示文字</span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>密码</dt>
+                    <dd>
+                        <input class="required" rangelength="6,12" type="password" name="password" />
+                        <span class="tips">密码只能是数字、字母和下划线。</span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>手机</dt>
+                    <dd>
+                        <input class="required mobile" type="text" name="mobile" />
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>姓名</dt>
+                    <dd>
+                        <input class="optional" type="text" name="name" />
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>E-mail</dt>
+                    <dd>
+                        <input class="optional email large-width" type="text" name="email" />
+                        <span class="tips">选填类型，E-mail格式</span>
+                    </dd>
+                </dl>
+                <p class="tips">特殊类型字段</p>
+                <dl>
+                	<dt>出生日期</dt>
+                	<dd>
+                        <input type="text" name="birthdayStr" class="Wdate" onfocus="WdatePicker()" />
+                        <span class="tips">日期类型</span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>性别</dt>
+                    <dd>
+                        <input class="ui-check" type="radio" name="gender" id="gender_female" value="female" checked="checked" />
+                        <label for="gender_female">女</label>
+                        <input class="ui-check" type="radio" name="gender" id="gender_male" value="male"/>
+                        <label for="gender_male">男</label>
+                        <span class="tips">字典/枚举类型</span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>政治面貌</dt>
+                    <dd>
+                        <select class="ui-select required" name="polityId">
+                            <option value="" selected="selected"> - 请选择 - </option>
+                            <option value="people">群众</option>
+                            <option value="comsomol">共青团员</option>
+                            <option value="party">共产党员</option>
+                        </select>
+                        <span class="tips">多对一类型</span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>兴趣</dt>
+                    <dd>
+                        <input class="ui-check" type="checkbox" name="interestIds" id="interest_soccer" value="soccer" />
+                        <label for="interest_soccer">足球</label>
+                        <input class="ui-check" type="checkbox" name="interestIds" id="interest_swim" value="swim" />
+                        <label for="interest_swim">游泳</label>
+                        <input class="ui-check" type="checkbox" name="interestIds" id="interest_read" value="read" />
+                        <label for="interest_read">阅读</label>
+                        <input class="ui-check" type="checkbox" name="interestIds" id="interest_sing" value="sing" />
+                        <label for="interest_sing">唱歌</label>
+                        <input class="ui-check" type="checkbox" name="interestIds" id="interest_film" value="film" />
+                        <label for="interest_film">电影</label>
+                        <input class="ui-check" type="checkbox" name="interestIds" id="interest_travel" value="travel" />
+                        <label for="interest_travel">旅行</label>
+                        <span class="tips">多对多类型</span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>备注</dt>
+                    <dd>
+                        <textarea name="comment"></textarea>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="ui-button fixed-bottom">
+        <input type="submit" value="提交" />
+        <input type="reset" value="重置" />
+    </div>
+</form>
+<script type="text/javascript">
+KindEditor.create('textarea[name="comment"]', {
+	width : 420,
+	items : [
+         'source', '|', 'preview', 'print', '|', 'forecolor', 'hilitecolor', 'bold',
+         'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat', '|',
+         'emoticons', 'link', 'unlink', '|', 'about'
+    ],
+    afterBlur: function () { this.sync(); }
+});
+</script>
+</div>

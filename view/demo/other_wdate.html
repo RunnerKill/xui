@@ -1,0 +1,34 @@
+<div class="ui-page">
+    <div class="ui-title fixed-top">
+        <h2>日期控件</h2>
+        <span>在input标签加上class="Wdate"，其它规则详见官网 <a href="http://www.my97.net/dp/demo/index.htm" target="_blank"><b>文档API</b></a></span>
+    </div>
+    <div class="ui-content">
+        <div class="ui-pannel">
+            <div class="ui-divider">input按钮</div>
+            <p>
+                <span>普通样式：</span>
+                <input type="text" class="Wdate" name="t1" onfocus="WdatePicker()" />
+                <span class="tips">onfocus="WdatePicker()"</span>
+            </p>
+            <p>
+                <span>自定义格式：</span>
+                <input type="text" class="Wdate" name="t2" onfocus="WdatePicker({dateFmt:'yyyy年MM月dd日 HH时mm分ss秒'})" style="width:300px"/>
+                <span class="tips">onfocus="WdatePicker({dateFmt:'yyyy年MM月dd日 HH时mm分ss秒'})"</span>
+            </p>
+            <p>
+                <span>双月日历：</span>
+                <input type="text" class="Wdate" name="t3" onfocus="WdatePicker({doubleCalendar:true,dateFmt:'yyyy-MM-dd'})"/>
+                <span class="tips">onfocus="WdatePicker({doubleCalendar:true,dateFmt:'yyyy-MM-dd'})"</span>
+            </p>
+            <p>
+                <span>时间范围：</span>
+                <input type="text" class="Wdate" id="startDate" name="t4"
+                 onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'endDate\')||\'2020-10-01\'}',onpicked:function() {endDate.focus();},readOnly:true})"/>
+                 - 
+                <input type="text" class="Wdate" id="endDate" name="t5"
+                 onfocus="WdatePicker({minDate:'#F{$dp.$D(\'startDate\')}',maxDate:'2020-10-01',readOnly:true})" />
+            </p>
+        </div>
+    </div>
+</div>

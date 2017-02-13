@@ -1,0 +1,31 @@
+<div class="ui-page">
+<form class="ui-form validate" action="demo/server_msg/file.json" method="post" enctype="multipart/form-data" onsubmit="return callbackFile(this)"">
+    <div class="ui-title fixed-top">
+        <h2>文件上传</h2>
+        <span>请注意，页面form需要加上 enctype="multipart/form-data"，且onsubmit="return callbackFile(this)"。</span>
+    </div>
+    <div class="ui-content">
+        <div class="ui-pannel">
+            <div class="ui-data-form">
+                <div class="ui-divider">文件上传表单</div>
+                <dl>
+                    <dt>附件</dt>
+                    <dd>
+                        <input class="required" type="file" name="file" />
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>其他参数</dt>
+                    <dd>
+                        <input class="required" type="text" name="text" />
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="ui-button fixed-bottom">
+        <input type="submit" value="提交" />
+        <input type="reset" value="重置" />
+    </div>
+</form>
+</div>

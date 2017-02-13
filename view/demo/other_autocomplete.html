@@ -1,0 +1,100 @@
+<div class="ui-page">
+    <div class="ui-title fixed-top">
+        <h2>autocomplete自动提示</h2>
+        <span>核心方法$(selector).autocomplete()，具体参数详见官网 <a href="https://jqueryui.com/autocomplete/" target="_blank"><b>文档API</b></a></span>
+    </div>
+    <div class="ui-content">
+        <div class="ui-pannel">
+            <div class="ui-divider">自定义提示示例</div>
+            <p>
+                <span>自动提示：</span>
+                <input type="text" name="keyword" placeholder="请输入社区的名称" id="keyword" />
+                <span class="tips">列如：输入“A”的时候，所有以A开头的选项都会出现在下拉列表里</span>
+            </p>
+            <div class="ui-divider">参数说明：</div>
+            <pre>　　minChars: 0, 　　　　　　　　  <span style="color: #008000;">//</span><span style="color: #008000;">至少输入的字符数，default：1；如果设为0，在输入框内双击或者删除内容时显示列表。 </span>
+<span style="color: #000000;">
+　　width: </span>220,　　　　　　　　　  <span style="color: #008000;">//</span><span style="color: #008000;">下拉框的宽度，default：input元素的宽度</span>
+<span style="color: #000000;">
+　　max: </span>10, 　　　　　　　　　　 <span style="color: #008000;">//</span><span style="color: #008000;">下拉项目的个数，default：10</span>
+<span style="color: #000000;">
+　　scrollHeight: </span>300,　　　　　　 <span style="color: #008000;">//</span><span style="color: #008000;"> 下拉框的高度， Default: 180</span>
+<span style="color: #000000;">
+　　scroll: </span><span style="color: #0000ff;">true</span>,　　　　　　　　    <span style="color: #008000;">//</span><span style="color: #008000;">当结果集大于默认高度时，是否使用滚动条，Default: true</span>
+<span style="color: #000000;">
+　　multiple: </span><span style="color: #0000ff;">false</span>, 　　　　　　　 <span style="color: #008000;">//</span><span style="color: #008000;">是否允许输入多个值. Default: false</span>
+<span style="color: #000000;">
+　　autoFill: </span><span style="color: #0000ff;">false</span>,　　　　　　　   <span style="color: #008000;">//</span><span style="color: #008000;"> 是否自动填充. Default: false</span>
+<span style="color: #000000;">
+　　multipleSeparator: </span>" ",　　    <span style="color: #008000;">//</span><span style="color: #008000;">输入多个字符时,用来分开各个的字符. Default: ","</span>
+<span style="color: #000000;">
+　　matchCase:</span><span style="color: #0000ff;">false</span>,　　　　     <span style="color: #008000;">//</span><span style="color: #008000;">是否开启大小写敏感</span>
+<span style="color: #000000;">
+　　selectFirst:</span><span style="color: #0000ff;">true</span>,    　　　　　  <span style="color: #008000;">//</span><span style="color: #008000;"> 如果设置成true,下拉列表的第一个值将被自动选择, Default: true</span>
+<span style="color: #000000;">
+　　matchSubset:</span><span style="color: #0000ff;">true</span>,    　　　   <span style="color: #008000;">//</span><span style="color: #008000;">是否启用缓存</span>
+<span style="color: #000000;">
+　　cacheLength: </span>10,    　　    　　 <span style="color: #008000;">//</span><span style="color: #008000;">缓存的长度.即缓存多少条记录.设成1为不缓存.Default: 10</span>
+<span style="color: #000000;">
+　　delay: </span>20,    　　　　　　　　 <span style="color: #008000;">//</span><span style="color: #008000;">击键后的延迟时间(单位毫秒).Default: 远程为400 本地10</span>
+<span style="color: #000000;">
+　　mustMatch:</span><span style="color: #0000ff;">false</span>,    　　    　   <span style="color: #008000;">//</span><span style="color: #008000;">如果设置为true,只会允许匹配的结果出现在输入框,当用户输入的是非法字符时,将被清除， Default: false</span>
+<span style="color: #000000;">
+　　matchContains:</span><span style="color: #0000ff;">true</span>,    　　 <span style="color: #008000;">//</span><span style="color: #008000;">决定比较时是否要在字符串内部查看匹配.Default: false</span>
+<span style="color: #000000;">
+　　formatItem: </span><span style="color: #0000ff;">function</span><span style="color: #000000;">(row, i, max) { }
+
+　　　　</span><span style="color: #008000;">//</span><span style="color: #008000;">结果中的每一行都会调用这个函数,返回值将用LI元素包含,显示在下拉列表中. 三个参数(row, i, max): 返回的结果数组, 当前处理的行数(从1开始),<br /> 当前结果数组元素的个数. Default: none, 表示不指定自定义的处理函数.</span>
+<span style="color: #000000;">
+　　formatResult : </span><span style="color: #0000ff;">function</span><span style="color: #000000;">(row, i, max) { }
+
+　　　　</span><span style="color: #008000;">//</span><span style="color: #008000;">和formatItem类似,但可以将将要输入到input文本框内的值进行格式化.同样有三个参数,和formatItem一样.Default: none,表示要么是只有数据,要么是<br />使用formatItem提供的值.</span>
+<span style="color: #000000;">
+　　formatMatch: </span><span style="color: #0000ff;">function</span><span style="color: #000000;">(row) { }
+
+　　　　</span><span style="color: #008000;">//</span><span style="color: #008000;">对每一行数据使用此函数格式化需要查询的数据格式. 返回值是给内部搜索算法使用的. 参数值row</span>
+<span style="color: #000000;">
+　　result (</span><span style="color: #0000ff;">function</span><span style="color: #000000;">(event, data, formatted){})
+       </span><span style="color: #008000;">//</span><span style="color: #008000;">此事件会在用户选中某一项后触发，参数为：event: 事件对象,data: 选中的数据行,formatted:formatResult函数返回的值;例如：<br /> $("#d").result(function(event, data, formatted){alert(formatted);})</span>
+
+<span style="color: #000000;">
+　　extraParams (Object):
+
+　　　　</span><span style="color: #008000;">//</span><span style="color: #008000;">为后台(一般是服务端的脚本)提供更多的参数.和通常的作法一样是使用一个键值对对象.如果传过去的值是{ bar:4 },将会被autocompleter解析成<br />my_autocomplete_backend.php?q=foo&amp;bar=4 (假设当前用户输入了foo). Default: {}</span></pre>
+            
+        </div>
+    </div>
+<script type="text/javascript">
+//文本框自动提示 - 初始化工作
+$("#keyword").autocomplete([
+    {province:"浙江省",city:"杭州市",zone:"滨江区",town:"XX街道",community:"A社区"},
+    {province:"浙江省",city:"杭州市",zone:"滨江区",town:"XX街道",community:"AB社区"},
+    {province:"浙江省",city:"杭州市",zone:"滨江区",town:"XX街道",community:"Ac社区"},
+    {province:"浙江省",city:"杭州市",zone:"滨江区",town:"a镇",community:"B社区"},
+    {province:"浙江省",city:"杭州市",zone:"滨江区",town:"b镇",community:"C社区"},
+    {province:"浙江省",city:"杭州市",zone:"滨江区",town:"a镇",community:"CA社区"},
+    {province:"浙江省",city:"杭州市",zone:"滨江区",town:"c镇",community:"D社区"},
+    {province:"浙江省",city:"杭州市",zone:"滨江区",town:"c镇",community:"e社区"},
+    {province:"浙江省",city:"杭州市",zone:"滨江区",town:"c镇",community:"f社区"},
+    {province:"浙江省",city:"杭州市",zone:"滨江区",town:"d镇",community:"G社区"},
+    {province:"浙江省",city:"杭州市",zone:"滨江区",town:"d镇",community:"H社区"},
+    {province:"浙江省",city:"杭州市",zone:"滨江区",town:"d镇",community:"i社区"}
+], {
+	width: 307,
+	scroll: false,
+	//mustMatch: true,
+	formatItem: function(data, i, max) {
+		return "<b>" + data.community + "</b> " +
+			"<span style='float:right;color:gray;'>" + 
+			data.province + "-" + data.city + "-" + data.zone + "-" + data.town +
+			"</span>";
+	},
+	formatMatch: function(data, i, max) {
+		return data.community;
+	},
+	formatResult: function(data) {
+		return data.community;
+	}
+});
+</script>
+</div>

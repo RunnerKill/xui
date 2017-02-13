@@ -1,0 +1,41 @@
+<div class="ui-page">
+    <div class="ui-title fixed-top">
+        <h2>选项卡（动态）</h2>
+        <span>样式class="ui-tab-bar"，结构为.ui-tab-bar>ul>li>a，静态选项卡局部刷新</span>
+    </div>
+    <div class="ui-content">
+        <div class="ui-pannel">
+            <div class="ui-tab-bar static">
+                <ul>
+                	<li>
+                        <a href="javascript:;" class="active">链接A</a>
+                    </li>
+                	<li>
+                        <a href="javascript:;">链接B</a>
+                    </li>
+                	<li>
+                        <a href="javascript:;">链接C</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-tab-content">
+                <!-- 此div为选项卡内容页，可加样式，可变内容 -->
+                <div>
+                    <span>页面A</span>
+                    <ol class="tips">
+                        <li>class="ui-tab-bar static"</li>
+                        <li>链接的href="javascript:;"</li>
+                        <li>在ui-tab-bar后紧跟一个class="ui-tab-content"的div</li>
+                        <li>div下有多个子div，对应tab-bar上每个链接</li>
+                    </ol>
+                </div>
+                <div>
+                    <span>页面B</span>
+                </div>
+                <div>
+                    <span>页面C</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

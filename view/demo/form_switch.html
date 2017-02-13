@@ -1,0 +1,40 @@
+<div class="ui-page">
+    <div class="ui-title fixed-top">
+        <h2>switch开关</h2>
+        <span>需要以下样式，请在input标签加上class="ui-switch"</span>
+    </div>
+    <div class="ui-content">
+        <div class="ui-pannel">
+            <div class="ui-divider">单选框radio</div>
+            <p>
+                <span>普通：</span>
+                <input class="ui-switch" type="checkbox" name="c1" />
+            </p>
+            <p>
+                <span>默认打开：</span>
+                <input class="ui-switch" type="checkbox" name="c2" checked="checked" />
+                <span class="tips">checked="checked"</span>
+            </p>
+            <p>
+                <span>绑定事件：</span>
+                <input class="ui-switch" type="checkbox" name="c3" onchange="XUI.alert(this.value)" />
+                <span class="tips"> onchange="XUI.alert(this.value)"</span>
+            </p>
+            <p>
+                <span>自定义文本：</span>
+                <input class="ui-switch" type="checkbox" name="c4" data-text="关闭/打开" />
+                <span class="tips">data-text="关闭/打开"</span>
+            </p>
+            <p>
+                <span>自定义值：</span>
+                <input class="ui-switch" type="checkbox" name="c5" value="no/yes" onchange="XUI.alert('值：' + this.value)" />
+                <span class="tips">value="no/yes"，其中"/"符号左侧是默认值，当有checked="checked"时，右侧是默认值。</span>
+            </p>
+            <p>
+                <span>自定义主题：</span>
+                <input class="ui-switch" type="checkbox" name="c6" checked="checked" data-theme="blue" />
+                <span class="tips">data-theme="blue"，后续可增加</span>
+            </p>
+        </div>
+    </div>
+</div>

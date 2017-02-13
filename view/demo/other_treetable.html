@@ -1,0 +1,177 @@
+<div class="ui-page">
+    <div class="ui-title fixed-top">
+        <h2>treetable树形表格</h2>
+        <span>核心方法$(selector).treetable()，具体参数详见官网 <a href="http://ludo.cubicphuse.nl/jquery-treetable" target="_blank"><b>文档API</b></a></span>
+    </div>
+    <div class="ui-content">
+        <div class="ui-tool-bar">
+            <ul>
+                <li><a class="ui-btn" href="server_msg/success.json" target="select" rel="ids" title="批量删除">批量删除</a></li>
+                <li><a class="ui-btn" href="javascript:;" onclick="$('#demo_treetable').treetable('expandAll');return false;">全部展开</a></li>
+                <li><a class="ui-btn" href="javascript:;" onclick="$('#demo_treetable').treetable('collapseAll');return false;">全部收缩</a></li>
+                <li><a class="ui-btn" href="other_treetable.html" target="main">刷新</a></li>
+            </ul>
+        </div>
+        <div class="ui-pannel">
+            <table class="ui-data-list" id="demo_treetable">
+                <tr>
+                    <th width="" align="left">
+                        <input class="all-select" type="checkbox" name="ids" />
+                        <span>名称</span>
+                    </th>
+                    <th width="30%" align="left">编号</th>
+                    <th width="14%">操作</th>
+                </tr>
+                <tr data-tt-id="0" data-tt-parent-id="" data-tt-branch="true">
+                    <td align="left">
+    					<input type="checkbox" name="ids" value="0"/>
+                        <span>我的电脑</span>
+    				</td>
+    				<td align="left">01</td>
+                    <td>
+                        <a href="javascript:;" onclick="$('#demo_treetable').treetable('removeNode', '0');">删除</a>
+                    </td>
+                </tr>
+                <tr data-tt-id="1" data-tt-parent-id="0" data-tt-branch="true">
+                    <td align="left">
+    					<input type="checkbox" name="ids" value="1"/>
+                        <span>C盘</span>
+    				</td>
+    				<td align="left">0101</td>
+                    <td>
+                        <a href="javascript:;" onclick="$('#demo_treetable').treetable('removeNode', '1');">删除</a>
+                    </td>
+                </tr>
+                <tr data-tt-id="2" data-tt-parent-id="0" data-tt-branch="true">
+                    <td align="left">
+    					<input type="checkbox" name="ids" value="2"/>
+                        <span>D盘</span>
+    				</td>
+    				<td align="left">0102</td>
+                    <td>
+                        <a href="javascript:;" onclick="$('#demo_treetable').treetable('removeNode', '2');">删除</a>
+                    </td>
+                </tr>
+                <tr data-tt-id="3" data-tt-parent-id="2" data-tt-branch="true">
+                    <td align="left">
+    					<input type="checkbox" name="ids" value="3"/>
+                        <span>文档</span>
+    				</td>
+    				<td align="left">010201</td>
+                    <td>
+                        <a href="javascript:;" onclick="$('#demo_treetable').treetable('removeNode', '3');">删除</a>
+                    </td>
+                </tr>
+                <tr data-tt-id="4" data-tt-parent-id="3" data-tt-branch="false">
+                    <td align="left">
+    					<input type="checkbox" name="ids" value="4"/>
+                        <span>文件.doc</span>
+    				</td>
+    				<td align="left">01020101</td>
+                    <td>
+                        <a href="javascript:;" onclick="$('#demo_treetable').treetable('removeNode', '4');">删除</a>
+                    </td>
+                </tr>
+                <tr data-tt-id="5" data-tt-parent-id="3" data-tt-branch="false">
+                    <td align="left">
+    					<input type="checkbox" name="ids" value="5"/>
+                        <span>表格.xls</span>
+    				</td>
+    				<td align="left">01020102</td>
+                    <td>
+                        <a href="javascript:;" onclick="$('#demo_treetable').treetable('removeNode', '5');">删除</a>
+                    </td>
+                </tr>
+                <tr data-tt-id="6" data-tt-parent-id="2" data-tt-branch="false">
+                    <td align="left">
+    					<input type="checkbox" name="ids" value="6"/>
+                        <span>照片.jpg</span>
+    				</td>
+    				<td align="left">010202</td>
+                    <td>
+                        <a href="javascript:;" onclick="$('#demo_treetable').treetable('removeNode', '6');">删除</a>
+                    </td>
+                </tr>
+                <tr data-tt-id="7" data-tt-parent-id="0" data-tt-branch="true">
+                    <td align="left">
+    					<input type="checkbox" name="ids" value="7"/>
+                        <span>E盘</span>
+    				</td>
+    				<td align="left">0103</td>
+                    <td>
+                        <a href="javascript:;" onclick="$('#demo_treetable').treetable('removeNode', '7');">删除</a>
+                    </td>
+                </tr>
+                <tr data-tt-id="8" data-tt-parent-id="7" data-tt-branch="false">
+                    <td align="left">
+    					<input type="checkbox" name="ids" value="8"/>
+                        <span>未知文件.dat</span>
+    				</td>
+    				<td align="left">010301</td>
+                    <td>
+                        <a href="javascript:;" onclick="$('#demo_treetable').treetable('removeNode', '8');">删除</a>
+                    </td>
+                </tr>
+                <tr data-tt-id="9" data-tt-parent-id="0" data-tt-branch="false">
+                    <td align="left">
+    					<input type="checkbox" name="ids" value="9"/>
+                        <span>F盘</span>
+    				</td>
+    				<td align="left">0104</td>
+                    <td>
+                        <a href="javascript:;" onclick="$('#demo_treetable').treetable('removeNode', '9');">删除</a>
+                    </td>
+                </tr>
+            </table>
+            <div class="ui-divider">ajax异步树</div>
+            <table class="ui-data-list" id="demo_treetable_ajax">
+                <tr>
+                    <th width="" align="left">
+                        <input class="all-select" type="checkbox" name="ids" />
+                        <span>名称</span>
+                    </th>
+                    <th width="30%" align="left">编号</th>
+                    <th width="14%">操作</th>
+                </tr>
+                <tr data-tt-id="0" data-tt-parent-id="" data-tt-branch="true">
+                    <td align="left">
+                        <input type="checkbox" name="ids" value="0"/>
+                        <span>异步树表格</span>
+                    </td>
+                    <td align="left">01</td>
+                    <td>
+                        <a href="javascript:;" onclick="$('#demo_treetable').treetable('removeNode', '0');">删除</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+<script type="text/javascript">
+var $treetable = $("#demo_treetable").treetable({
+	expandable: true,
+	column: 0
+});
+var $ajax_treetable = $("#demo_treetable_ajax").treetable({
+	expandable: true,
+	column: 0,
+	/* 异步加载示例代码 */
+	ajax: "../view/demo/server_msg/treetable_data.json", // 请求url
+	callback: function(dataList) { // 请求回调，参数dataList：由服务器端返回的json列表字符串，转换而成的js数组对象
+		for(var i in dataList) {
+			var data = dataList[i];
+    		obj = {
+    			id: data.id,
+    			isBranch: data.isBranch,
+    			tdArray: [ // 回调数组，对应表格中的列html
+    				'<a href="javascript:;">' + data.id + '</a>',
+    				data.id,
+    				'<span style="color: red;">id : ' + data.id + '</span>'
+    			]
+    		};
+    		this.push(obj);
+		}
+		return this;
+	}
+});
+</script>
+</div>

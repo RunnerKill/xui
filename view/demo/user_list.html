@@ -1,0 +1,103 @@
+<div class="ui-page">
+  	<div class="ui-title fixed-top">
+        <h2>示例列表</h2>
+        <span>请注意，这里是提示信息提示信息提示信息提示信息</span>
+    </div>
+    <div class="ui-content">
+      	<div class="ui-search-bar">
+      	<form class="ui-form-search" action="demo/user_list.html" method="post" onsubmit="return callbackSearch(this)">
+    		姓名：
+            <input type="text" name="name" value="" />
+    		创建时间：
+            <input type="text" class="Wdate" id="startDate" name="createTimeStart" value=""
+             onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'endDate\')||\'2020-10-01\'}',onpicked:function() {endDate.focus();},readOnly:true})"/>
+    		 - 
+            <input type="text" class="Wdate" id="endDate" name="createTimeEnd" value=""
+             onfocus="WdatePicker({minDate:'#F{$dp.$D(\'startDate\')}',maxDate:'2020-10-01',readOnly:true})" />
+            <div class="ui-search-button">
+        		<input class="submit active" type="submit" value="查询" />
+        		<input class="clear" type="button" value="清空" />
+            </div>
+      	</form>
+      	</div>
+      	
+      	<div class="ui-tool-bar">
+      		<ul>
+      			<li><a class="ui-btn" href="demo/server_msg/success.json" target="select" rel="ids" title="批量删除">批量删除</a></li>
+      			<li><a class="ui-btn" href="demo/user_add.html" target="navtab" rel="user_add">添加</a></li>
+      		</ul>
+      	</div>
+    
+        <div class="ui-pannel">
+    	  	<table class="ui-data-list">
+    	  		<tr>
+    				<th width="3%"><input class="all-select" type="checkbox" name="ids" /></th>
+    				<th width="4%">序号</th>
+    				<th width="">账号</th>
+    				<th width="16%">E-mail</th>
+    				<th width="8%" class="order">姓名</th>
+    				<th width="10%" class="order">手机</th>
+    				<th width="16%" class="order">创建时间</th>
+    				<th width="16%">修改时间</th>
+    				<th width="12%">操作</th>
+    			</tr>
+    			<tr>
+    				<td><input name="ids" type="checkbox" value="1" /></td>
+    				<td class="number"></td>
+    				<td><a href="demo/user_detail.html?id=1">用户1</a></td>
+    				<td>user1@sina.com</td>
+    				<td>姓名1</td>
+    				<td>13111111111</td>
+    				<td>2016-03-02 12:33:20</td>
+    				<td>2016-03-02 12:33:20</td>
+    				<td>
+    					<a href="demo/user_edit.html?id=1" target="navtab" rel="user_edit">编辑</a>
+    					<a href="demo/server_msg/success.json?id=1" target="ajax" title="删除">删除</a>
+    				</td>
+    			</tr>
+    			<tr>
+    				<td><input name="ids" type="checkbox" value="2" /></td>
+    				<td class="number"></td>
+    				<td><a href="demo/user_detail.html?id=2">用户2</a></td>
+    				<td>user2@sina.com</td>
+    				<td>姓名2</td>
+    				<td>13222222222</td>
+    				<td>2016-03-02 12:33:20</td>
+    				<td>2016-03-02 12:33:20</td>
+    				<td>
+    					<a href="demo/user_edit.html?id=2" target="navtab" rel="user_edit">编辑</a>
+    					<a href="demo/server_msg/success.json?id=2" target="ajax" title="删除">删除</a>
+    				</td>
+    			</tr>
+    			<tr>
+    				<td><input name="ids" type="checkbox" value="3" /></td>
+    				<td class="number"></td>
+    				<td><a href="demo/user_detail.html?id=3">用户3</a></td>
+    				<td>user3@sina.com</td>
+    				<td>姓名3</td>
+    				<td>13333333333</td>
+    				<td>2016-03-02 12:33:20</td>
+    				<td>2016-03-02 12:33:20</td>
+    				<td>
+    					<a href="demo/user_edit.html?id=3" target="navtab" rel="user_edit">编辑</a>
+    					<a href="demo/server_msg/success.json?id=3" target="ajax" title="删除">删除</a>
+    				</td>
+    			</tr>
+    	  	</table>
+            <!-- 内嵌样式
+    	  	<div class="ui-pager" data-page="10,15,20,50,100">
+                <input type="hidden" name="curPage" value="${curPage}"/>
+                <input type="hidden" name="pageSize" value="${pageSize}" />
+                <input type="hidden" name="totalCount" value="${totalCount}" />
+                <input type="hidden" name="orderBy" value="${orderBy}" />
+            </div>
+             -->
+        </div>
+  	</div>
+  	<div class="ui-pager fixed-bottom" data-page="10,15,20,50,100">
+        <input type="hidden" name="curPage" value="1"/>
+        <input type="hidden" name="pageSize" value="10" />
+        <input type="hidden" name="totalCount" value="3" />
+        <input type="hidden" name="orderBy" value="${orderBy}" />
+    </div>
+</div>
