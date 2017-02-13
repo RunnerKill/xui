@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+img {
+	background-color: #cecece;
+}
+
+/* 背景切换 */
+.ui-login-bg {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 1;
+}
+.ui-login-bg img {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/* 标题 */
+.ui-login-title {
+	position: absolute;
+	left: 50%;
+	top: 50px;
+	margin-left: -280px;
+	width: 560px;
+	text-align: center;
+	color: #fff;
+	z-index: 2;
+}
+.ui-login-title img {
+	display: inline-block;
+    vertical-align: middle;
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+	background-color: transparent;
+}
+.ui-login-title h2 {
+	display: inline-block;
+    vertical-align: middle;
+	font-size: 38px;
+	letter-spacing: .2em;
+	line-height: 55px;
+}
+.ui-login-title p {
+	font-size: 14px;
+}
+
+/* 登录区域 */
+.ui-login-form {
+	position: absolute;
+	left: 50%;
+	top: 150px;
+	margin-left: -250px;
+	width: 420px;
+	padding: 0 40px;
+	z-index: 2;
+	background-color: #fff;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.ui-login-form a {
+	color: #ff7f00;
+}
+.ui-login-form .line {
+	height: auto;
+	margin: 20px 0;
+}
+.ui-login-form .title {
+	font-size: 30px;
+	line-height: 40px;
+}
+.ui-login-form .tips {
+	float: right;
+	line-height: 40px;
+}
+.ui-login-form input[type="text"],.ui-login-form input[type="password"] {
+	border: 1px solid #ccc;
+	width: 405px;
+	height: 45px;
+	line-height: 45px;
+	font-size: 18px;
+	padding-left: 15px;
+}
+.ui-login-form input[type="text"]:focus,.ui-login-form input[type="password"]:focus {
+	border-color: orange;
+}
+.ui-login-form input.code {
+	width: 180px;
+}
+.ui-login-form img.code-img {
+	display: inline-block;
+	vertical-align: top;
+	width: 110px;
+	height: 47px;
+	margin-left: 15px;
+}
+.ui-login-form input.login {
+	border: none;
+	background-color: #ff7f00;
+	width: 197px;
+	height: 45px;
+	font-size: 24px;
+	text-align: center;
+	letter-spacing: .2em;
+	color: #fff;
+}
+.ui-login-form .fgt-pwd {
+	margin-left: 15px;
+}
+.ui-login-form .err {
+	color: #ff0000;
+}
+
+
+/* 底部 */
+.ui-bottom {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	bottom: 0;
+	z-index: 2;
+	text-align: center;
+	padding: 1em 0;
+/* 	background-color: #3e3c48; */
+	background-color: rgba(0,0,0,0.8);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#900000000,endColorstr=#900000000);
+	
+}
+.ui-bottom, .ui-bottom a {
+	color: #fff;
+	font-size: 14px;
+}
+
+
+
+

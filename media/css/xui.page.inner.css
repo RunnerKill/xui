@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+.ztree {
+	display: inline-block;
+}
+.ztree, .ztree li {
+	overflow: visible;
+}
+
+/* 左侧菜单 */
+.ui-inner-container {
+	padding: 0 !important;
+	height: 100%;
+}
+.ui-inner-menu, .ui-inner {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+}
+.ui-inner-menu {
+	left: 0;
+	padding: 0 10px;
+	width: 210px;
+	border-right: 1px solid #e9e9e9;
+	overflow: auto;
+}
+.ui-inner {
+	left: 231px;
+	right: 0;
+}

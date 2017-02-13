@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* 初始化样式 */
+html, body, a, input, textarea {
+    font: 13px 微软雅黑, Microsoft YaHei, Arial, Verdana, Tahoma, Sans-serif;
+}
+
+html,body,p,i,u,a,b,s,h4,h5,h6,h1,h2,h3,ul,li,dl,dd,dt,label,div,ol,pre,code,legend,button,form,fieldset,input,textarea,blockquote,th,td {
+	margin: 0;
+	padding: 0;
+}
+
+body,ul,li,dl,dd,dt,img {
+	display: block;
+	list-style: none;
+	overflow: hidden;
+}
+
+a, input, img, textarea, del,ins {
+    text-decoration: none;
+    text-shadow: none !important;
+    outline: none !important;
+}
+
+table {   
+　　border-collapse: collapse;   
+　　border-spacing: 0;   
+}   
+
+input,button,textarea,select,optgroup,option {
+    font-family:inherit;
+    font-size:inherit;
+    font-style:inherit;
+    font-weight:inherit;
+}
+
+.clearfix {
+	clear: both;
+	float: none;
+}
+
+.clear-both:after {
+	content: "\200B";
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+.table-cell:after {
+	content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+	visibility: hidden;
+	clear: both;
+	height: 0!important;
+	display: block;
+	line-height: 0;
+}

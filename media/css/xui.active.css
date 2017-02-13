@@ -1,0 +1,326 @@
+@charset "utf-8";
+
+img {
+	background-color: #cecece;
+}
+
+/* 背景切换 */
+.ui-login-bg {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 1;
+}
+.ui-login-bg img {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/* 标题 */
+.ui-login-title {
+	position: absolute;
+	left: 50%;
+	top: 50px;
+	margin-left: -280px;
+	width: 560px;
+	text-align: center;
+	color: #fff;
+	z-index: 2;
+}
+.ui-login-title img {
+	display: inline-block;
+    vertical-align: middle;
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+	background-color: transparent;
+}
+.ui-login-title h2 {
+	display: inline-block;
+    vertical-align: middle;
+	font-size: 38px;
+	letter-spacing: .2em;
+	line-height: 55px;
+}
+.ui-login-title p {
+	font-size: 14px;
+}
+
+/* 激活区域 */
+.ui-active-form {
+	position: absolute;
+  	left: 38%;
+	top: 150px;
+	margin-left: -250px;
+	width: 756px;
+	padding: 0 40px;
+	z-index: 2;
+	background-color: #fff;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.ui-active-form .ui-active-top {
+	height: auto;
+	margin: 20px 0;
+}
+.ui-active-top ul{
+	position: relative;
+  	width: 783px;
+  	height: 60px;
+  	padding: 4px 0;
+  	text-align: center;
+}
+.ui-active-top>ul>li{
+	height: 60px;
+	width: 172px;
+	display: inline-block;
+}
+.ui-active-top ul li.start-active{
+	background: url("../images/active/top-start-active.png") no-repeat;
+}
+.ui-active-top ul li.top-start{
+	background: url("../images/active/top-start.png") no-repeat;
+}
+.ui-active-top ul li.top-middle{
+	background: url("../images/active/top-middle.png") no-repeat;
+}
+.ui-active-top ul li.middle-active{
+	background: url("../images/active/top-middle-active.png") no-repeat;
+}
+.ui-active-top ul li.top-end{
+	background: url("../images/active/top-end.png") no-repeat;
+}
+.ui-active-top ul li.top-end-active{
+	background: url("../images/active/top-end-active.png") no-repeat;
+}
+.ui-active-top ul li span{
+	width: 27px;
+  	height: 27px;
+  	background-color: #FFF;
+  	-moz-border-radius: 50px;
+  	-webkit-border-radius: 50px;
+  	border-radius: 25px;
+  	margin-right: 10px;
+  	display: inline-block;
+}
+.ui-active-top ul li span i{
+	color:#000; 
+	text-align:center;
+	font: 16px/27px 微软雅黑;
+	font-weight: bold;
+}
+.ui-active-top ul li b{
+	font: 15px/55px 微软雅黑;
+	font-weight: bold;
+}
+.ui-active-top ul li b.active{
+	color:#fff;
+}
+.ui-active-form .ui-active-main {
+	height: auto;
+	/* margin: 20px 0; */
+  /* margin: 0 auto;
+  right: 50px; */
+}
+.ui-active-main .ui-active-left{
+	width: 41%;
+  	height: 299px;
+  	display: inline-block;
+  	float: left;
+}
+.ui-active-left i {
+	height: 100%;
+	display: block;
+}
+.step1 i{
+	background: url("../images/active/bg_map.png") no-repeat;
+	/* background: url("../images/active/register.png") no-repeat; */
+}
+.step2 i{
+	background: url("../images/active/bg_map.png") no-repeat;
+/* 	background: url("../images/active/bind.png") no-repeat; */
+}
+.step3 i{
+	background: url("../images/active/bg_map.png") no-repeat;
+/* 	background: url("../images/active/activation.png") no-repeat; */
+}
+.success i{
+	background: url("../images/active/success.png") no-repeat;
+}
+.failed i{
+	background: url("../images/active/failed.png") no-repeat;
+}
+.ui-active-right{
+	width: 55%;
+  	display: inline-block;
+}
+.ui-active-right .ui-active-content{
+	margin-bottom:10px;
+  	position: relative;
+}
+.ui-active-right .ui-active-input{
+	margin-bottom: 30px;
+  	position: relative;
+  	text-align: center;
+}
+.ui-tips {
+	position: relative;
+}
+.ui-tips>.bb {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	width: 10px;
+	border: 5px solid #C5C5C5;
+}
+.ui-tips>.before {
+	left: 0;
+	border-right: none;
+}
+.ui-tips>.after {
+	right: 0;
+	border-left: none;
+}
+.ui-active-input>span.content{
+	font: 18px 微软雅黑 bold;
+	color: #ff7f00;
+}
+.ui-active-input input[type="text"] {
+	height: 50px !important;
+	line-height: 50px !important;
+}
+.ui-active-content>i{
+	position: absolute;
+  	width: 24px;
+  	height: 24px;
+  	display: inline-block;
+  	margin: auto 0;
+  	top: 0;
+  	left: 2%;
+  	bottom: 0;
+  	right: 0;
+}
+.ui-active-content .account{
+	background: url("../images/active/icon-account.png");
+}
+.ui-active-content .psw{
+	background: url("../images/active/icon-password.png");
+}
+.ui-active-content .mobile{
+	background: url("../images/active/icon-mobile.png");
+}
+.ui-active-content .email{
+	background: url("../images/active/icon-email.png");
+}
+.ui-active-content .key{
+	background: url("../images/active/icon-active.png");
+}
+.ui-active-content .agreement {
+	line-height: 40px;
+	font-size: 16px;
+}
+.ui-active-form .agreement a {
+	color: #5a96bd;
+	font-size: 16px;
+}
+.ui-active-content .tips {
+	line-height: 40px;
+	font-size: 16px;
+}
+.ui-active-form .tips a {
+	font-size: 16px;
+	color: #ababab;
+  	margin-left: 40px;
+}
+.ui-active-form input[type="text"],.ui-active-form input[type="password"] {
+	border: 1px solid #ccc;
+	width: 380px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	padding-left: 36px;
+}
+.ui-active-form input[type="text"]:focus,.ui-active-form input[type="password"]:focus {
+	border-color: orange;
+}
+.ui-active-form input.next {
+	border: none;
+	background-color: #ff7f00;
+	width: 423px;
+	height: 45px;
+	font-size: 24px;
+	text-align: center;
+	letter-spacing: .2em;
+	color: #fff;
+}
+.ui-active-form input.disabled {
+	background-color: #c0c0c0;
+}
+.ui-active-finish{
+	position: absolute;
+  	top: 50%;
+  	left: 56%;
+}
+.ui-active-success{
+	position: absolute;
+  	top: 74%;
+  	left: 44%;
+}
+.ui-active-success span{
+	 font:31px 微软雅黑;
+}
+.active-success{
+	 color: #ff7f00;
+}
+.active-failed{
+	 color: gray;
+}
+.use{
+	border: none;
+  	background-color: #ff7f00;
+  	height: 45px;
+  	font-size: 18px;
+  	color: #fff;
+  	padding: 0 50px;
+}
+.ui-active-finish a{
+	 font: 16px 微软雅黑;
+	 color: #ff7f00;
+	 padding: 0 30px;
+}
+.ui-active-form .fgt-pwd {
+	margin-left: 15px;
+}
+.ui-active-form .err {
+	color: #ff0000;
+}
+/* 底部 */
+.ui-bottom {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	bottom: 0;
+	z-index: 1;
+	text-align: center;
+	padding: 1em 0;
+/* 	background-color: #000; */
+	background-color: rgba(0,0,0,0.8);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#900000000,endColorstr=#900000000);
+	
+	
+}
+.ui-bottom, .ui-bottom a {
+	color: #fff;
+	font-size: 14px;
+}
+
+
+
+

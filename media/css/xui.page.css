@@ -1,0 +1,331 @@
+@charset "utf-8";
+
+.ui-right {
+	background: transparent url("../images/bg-menu.png") top left;
+}
+
+.ui-page {
+	background-color: #ffffff;
+}
+
+.ui-page>iframe {
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: #fff;
+}
+
+/* 划分线 */
+.ui-divider {
+	margin: 5px 0;
+	padding: 0 1em;
+	line-height: 2em;
+	border-bottom: 1px dotted #efeeec;
+	font-size: 16px;
+}
+
+/* 主体内容 */
+.ui-content {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: auto;
+}
+
+/* 页标题 */
+.ui-title {
+	background-color: #f5f5f5;
+	line-height: 35px;
+	position: relative;
+	border-bottom: 1px solid #e9e9e9;
+}
+.ui-title h2 {
+	font-weight: normal;
+	font-size: 15px;
+	padding-left: 38px;
+	background: url("../images/icons/icon-app.png") no-repeat 12px center;
+	-webkit-background-size: 16px 16px;
+	background-size: 16px 16px;
+}
+.ui-title span {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 50%;
+	color: #777;
+	border-left: 1px dotted #888;
+	padding-left: 2em;
+}
+
+/* 查询区域 */
+.ui-search-bar {
+	position: relative;
+	background-color: #efefef;
+	border-top: 1px solid #e9e9e9;
+	border-bottom: 1px solid #e9e9e9;
+	margin-top: -1px;
+	padding: 0px 120px 2px 10px;
+	line-height: 40px;
+}
+.ui-search-bar input {
+	margin: 0 3px;
+}
+.ui-search-bar input[type="text"], .ui-search-bar select {
+	width: 95px;
+}
+.ui-search-bar .ui-search-button {
+	position: absolute;
+	right: 10px;
+	bottom: 2px;
+	line-height: 40px;
+}
+
+/* 选项卡 */
+.ui-tab-bar {
+	border-bottom: 1px solid #eee;
+}
+.ui-tab-bar>ul {
+	height: 2em;
+	padding: 1px 0;
+	overflow: visible;
+}
+.ui-tab-bar>ul>li {
+	float: left;
+	overflow: visible;
+}
+.ui-tab-bar>ul>li>a {
+	display: block;
+	padding: 0 .5em;
+	margin: 0 .8em;
+	line-height: 2em;
+	border-bottom: 3px solid transparent;
+}
+.ui-tab-bar>ul>li>a.active, .ui-tab-bar>ul>li>a:hover {
+	color: #000;
+	border-color: #60b8d1;
+	text-decoration: none;
+}
+.ui-tab-bar>ul>li>a.active {
+    cursor: default;
+}
+
+/* 工具条 */
+.ui-tool-bar {
+	background-color: #fff;
+	border-bottom: 1px solid #f5f5f5;
+	padding: 5px 10px 2px 10px;
+	text-align: right;
+}
+.ui-tool-bar>ul>li {
+	display: inline-block;
+	margin: 0 3px;
+}
+.ui-tool-bar>ul>li>a:hover {
+	text-decoration: none;
+}
+.ui-tool-bar>ul>li.comment{
+	float: left;
+    color: gray;
+    margin-top: 13px;
+    font-size: 10px;
+}
+
+/* pannel区域 */
+.ui-pannel {
+	position: relative;
+	background-color: #fff;
+	padding: 10px;
+}
+.ui-pannel>p {
+    margin: 10px 0;
+}
+.ui-pannel>p>span {
+    display: inline-block;
+}
+.ui-pannel>p>span:first-child {
+    width: 7em;
+    vertical-align: top;
+}
+.ui-pannel a {
+	color: #999;
+}
+.ui-pannel a.ui-btn {
+	color: #fff;
+}
+.ui-pannel a:hover {
+	text-decoration: underline;
+}
+.ui-pannel a.ui-btn:hover {
+	text-decoration: none;
+}
+
+/* 数据列表 */
+.ui-data-list {
+	width: 100%;
+	margin: 0;
+}
+.ui-data-list,.ui-data-list td,.ui-data-list th {
+	border: 1px solid;
+	border-collapse: collapse;
+	border-color: #eceae8;
+}
+.ui-data-list td,.ui-data-list th {
+	height: 35px;
+	padding: 2px 0px;
+	vertical-align: middle;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.ui-data-list th.order {
+	cursor: pointer;
+	color: #777;
+}
+.ui-data-list th.order:hover {
+	text-decoration: underline;
+}
+.ui-data-list th.order.desc:after,.ui-data-list th.order.asc:after {
+	display: inline-block;
+	margin-left: 10px;
+	content: " ";
+	width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+.ui-data-list th.order.desc:after {
+	border-top: 8px solid #60b8d1;
+}
+.ui-data-list th.order.asc:after {
+    border-bottom: 8px solid #d16060;
+}
+.ui-data-list td[align="left"], .ui-data-list th[align="left"] {
+	text-align: left;
+	padding-left: 10px;
+}
+.ui-data-list th {
+	background-color: #f1f1f1;
+}
+.ui-data-list tr:nth-child(even) td {
+	background-color: #fff;
+}
+.ui-data-list tr:nth-child(odd) td {
+	background-color: #f9f9f9;
+}
+.ui-data-list tr:hover td {
+	background-color: #f1f9fc;
+}
+
+/* 分页区域 */
+.ui-pager {
+	margin-top: 10px;
+}
+
+/* 数据表单 */
+.ui-data-form {
+	width: 100%;
+}
+.ui-data-form dl {
+	margin: 10px 0;
+	padding: 20px 35px;
+	line-height: 30px;
+	min-height: 30px;
+	background-color: #f6f5f4;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	overflow: visible;
+}
+.ui-data-form dl:after {
+	content: " ";
+	display: block;
+	clear: both;
+}
+.ui-data-form dt {
+	float: left;
+	width: 5em;
+	vertical-align: top;
+}
+.ui-data-form dd {
+	margin-left: 6em;
+	overflow: visible;
+	word-wrap: break-word;
+}
+table.ui-data-form,.ui-data-form td,.ui-data-form th {
+	border: 1px solid;
+	border-collapse: collapse;
+	border-color: #eceae8;
+}
+.ui-data-form td,.ui-data-form th {
+	height: 45px;
+	line-height: 45px;
+	padding: 5px 1em;
+	vertical-align: middle;
+	word-break: break-all;
+}
+.ui-data-form th {
+	text-align: left;
+	padding-left: 35px;
+	width: 5em;
+	font-weight: normal;
+	background-color: #f9f9f9;
+}
+.ui-data-form th[colspan] {
+	font-size: 18px;
+	background-color: #f1f1f1;
+}
+.ui-data-form th.tips {
+	font-size: 1em;
+	background-color: #fff;
+}
+.ui-data-form p.tips {
+	line-height: 22px;
+	padding: 0 2em;
+}
+
+/* 底部按钮 */
+.ui-button {
+	padding-top: 10px;
+}
+.ui-button>input, .ui-button>a {
+	margin: 0 3px;
+}
+
+/* 固定区域 */
+.fixed-top, .fixed-left, .fixed-right, .fixed-bottom {
+	position: absolute;
+}
+.fixed-top {
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.fixed-left {
+	left: 0;
+	top: 0;
+	bottom: 0;
+}
+.fixed-right {
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.fixed-bottom {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+	border-top: 1px solid #e9e9e9;
+	pointer-events: auto;
+	padding: 6px 20px 8px;
+}
+.ui-button.fixed-bottom {
+	text-align: right;
+}
+.ui-pager.fixed-bottom {
+	text-align: left;
+}
